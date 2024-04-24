@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+    <title>Vlad Gliga : My Skills</title>
+</head>
+<body>
+    <div class="main-section">
+        <!-- <Main section> -->
+        <h1 id="page-title" class="third-color">Vlad Gliga's Webpage : Skills</h1>
+        <ul class="navbar" class="first-color">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="skills.html">My Skills</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li style="float:right"><a class="active first-color" href="about.html">About</a></li>
+          </ul>
+
+        <!-- Content section -->
+
+        <div class="skills-section">
+            <div>
+                <h2 id="my-skills">My Skills</h2>
+            </div>
+            <div class="skills-list">
+                <p>NET framework</p>
+                <p>WinForms</p>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>GIT</p>
+                <p>SOLID Principles</p>
+                <p>Azure DevOps</p>
+            </div>
+        </div>
+        <div class="image-section">
+            <div class="img-container">
+                <img src="Images/dotnet.jpg" id="image1" height="500px">
+                <button onclick="right()" id="btnRight"><img src="Images/arrow_next.png" height="40px" id="arrow"></button>
+                <button onclick="left()" id="btnLeft" hidden><img src="Images/arrow_previous.png" height="40px" id="arrow"></button>
+        
+                <img id="image2" height="500px">
+            </div>
+            
+        <script>
+            
+            function change1(){
+                document.getElementById('smiley').innerText = ":)";
+            }
+        
+            function change2(){
+                document.getElementById('smiley').innerText = ":(";
+            }
+        
+            function color(){
+                document.getElementById('smiley').style.color = event.target.value;
+            }
+           
+        
+            function right(){
+                document.getElementById('image2').src = "Images/IT_generic.jpg"
+                document.getElementById('image1').src = ""
+                document.getElementById('btnLeft').removeAttribute("hidden");
+                document.getElementById('btnRight').setAttribute("hidden", "");
+            }
+        
+            function left(){
+                document.getElementById('image1').src = "Images/dotnet.jpg"
+                document.getElementById('image2').src = ""
+                document.getElementById('btnLeft').setAttribute("hidden", "");
+                document.getElementById('btnRight').removeAttribute("hidden");
+            }
+        
+        </script>
+    </div>
+    
+</body>
+</html>
